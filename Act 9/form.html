@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DAW-08</title>
+    <title>DAW-09</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="formStyles.css">
-    <script src="validate.js"></script>
+    <script src="validate.js" defer></script>
 </head>
 <body>
     <h1>Infotimes</h1>
     <p class="data">Ingrese sus datos personales:</p>
-    <form>
+    <form id="registrationForm">
         <div>
             <p>Nombre completo</p>
             <input type="text" name="name">
         </div>
-        <div>
+        <div> 
             <p>Email</p>
             <input type="email" name="email">
         </div>
@@ -24,33 +24,33 @@
             <p>Contraseña</p>
             <input type="password" name="password">
         </div>
-        <div>            
+        <div>          
             <p>Repita su contraseña</p>
-            <input type="password" name="password">
+            <input type="password" name="confirmPassword">
         </div>
-        <div>
+        <div> 
             <p>Edad</p>
-            <input type="age" name="age">
+            <input type="number" name="age">
         </div>
-        <div>
+        <div> 
             <p>Teléfono</p>
-            <input type="phone" name="phone">
+            <input type="tel" name="phone">
         </div>
-        <div>
+        <div> 
             <p>Dirección</p>
-            <input type="address" name="address">
+            <input type="text" name="address">
         </div>
         <div>
             <p>Ciudad</p>
-            <input type="city" name="city">
+            <input type="text" name="city">
         </div>
         <div>
             <p>Código Postal</p>
-            <input type="postalCode" name="postalCode">
+            <input type="text" name="postalCode">
         </div>
         <div>
-            <p>DNI</p>
-            <input type="dni" name="dni">
+            <p>Dni</p>
+            <input type="text" name="dni">
         </div>
         <div class="buttons">
             <button class="submit" type="submit">Enviar</button>
@@ -58,5 +58,13 @@
             <a href="index.html" class="button">Volver</a>
         </div>      
     </form>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <p id="modalMessage"></p>
+            <pre id="modalData"></pre>
+        </div>
+    </div>
 </body>
 </html>
