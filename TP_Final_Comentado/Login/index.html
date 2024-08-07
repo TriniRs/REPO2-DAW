@@ -1,0 +1,50 @@
+Aquí tienes el mismo código, ahora con comentarios que explican lo que hace cada línea:
+
+```html
+<!DOCTYPE html>
+<html lang="en"> <!-- Define el tipo de documento y el lenguaje -->
+<head>
+    <meta charset="UTF-8"> <!-- Especifica la codificación de caracteres utilizada -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta la vista para diferentes dispositivos -->
+    <title>Boogle Game</title> <!-- Título de la página web -->
+    <link rel="stylesheet" href="normalize.css"> <!-- Enlace a la hoja de estilos normalize.css para normalizar el CSS entre navegadores -->
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace a la hoja de estilos personalizada -->
+    <script src="https://kit.fontawesome.com/52b93ef4f1.js" crossorigin="anonymous"></script> <!-- Enlace a Font Awesome para usar iconos -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!-- Enlace a Boxicons para más iconos -->
+    <script type="text/javascript" src="app.js" defer></script> <!-- Enlace al archivo JavaScript que se ejecutará después de cargar la página -->
+</head>
+<body>
+    <header>
+        <!-- Formulario de entrada de datos -->
+        <form id="form">
+            <h1>Boogle Game</h1> <!-- Título principal del juego -->
+            <div class="inputBox" id="nameInput"> <!-- Contenedor para el campo de entrada del nombre -->
+                <div id="errorMessage" class="errorMessage"></div> <!-- Contenedor para mostrar mensajes de error -->
+                <input type="text" id='name' placeholder="Name" required> <!-- Campo de entrada de texto para el nombre -->
+                <i class='bx bxsUser'></i> <!-- Icono de usuario -->
+            </div>
+            <div class="inputBox"> <!-- Contenedor para el campo de entrada del correo -->
+                <div id="errorMessage" class="errorMessage"></div> <!-- Contenedor para mostrar mensajes de error -->
+                <input type="text" id='mail' placeholder="Mail" required> <!-- Campo de entrada de texto para el correo -->
+                <i class='bx bxEnvelope'></i> <!-- Icono de sobre -->
+            </div>
+            <div>
+                <p><select class="selectBox" id="selectTime" onchange=""> <!-- Menú desplegable para seleccionar el tiempo de juego -->
+                    <option value="" disabled selected>Select time</option> <!-- Opción predeterminada, no seleccionable -->
+                    <option>1 minute</option> <!-- Opción de 1 minuto -->
+                    <option>2 minute</option> <!-- Opción de 2 minutos -->
+                    <option>3 minute</option> <!-- Opción de 3 minutos -->
+                </select></p>
+            </div>  
+            <button type="button" id="startGameButton" class="btn"> <!-- Botón para iniciar el juego -->
+                Start game
+            </button>
+        </form>
+    </header>   
+    <div class="divFooter"> <!-- Pie de página -->
+        <a href="https://github.com/Marani-Ignacio/TP_Boogle" class="github-button"> <!-- Enlace al repositorio de GitHub -->
+            <i class="fa-brands fa-github"></i> <!-- Icono de GitHub -->
+    </div> 
+    
+</body> 
+</html>

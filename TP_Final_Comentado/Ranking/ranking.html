@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Define el tipo de documento y el idioma como español -->
+<head>
+    <meta charset="UTF-8"> <!-- Especifica la codificación de caracteres para la página web -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para que sea responsiva en diferentes dispositivos -->
+    <title>Ranking de juegos</title> <!-- Título de la página web que aparecerá en la pestaña del navegador -->
+    <link rel="stylesheet" href="ranking.css"> <!-- Enlace a la hoja de estilos personalizada para esta página -->
+    <link rel="stylesheet" href="normalize.css"> <!-- Enlace a la hoja de estilos normalize.css para normalizar el CSS entre navegadores -->
+</head>
+<body>
+    <div class="container"> <!-- Contenedor principal que envuelve todo el contenido de la página -->
+        <h1>Game ranking</h1> <!-- Encabezado principal de la página de ranking -->
+        <div class="controls"> <!-- Contenedor para los botones de control de clasificación -->
+            <button id="sortScore" class="btn">Sort by points</button> <!-- Botón para ordenar por puntos -->
+            <button id="sortDate" class="btn">Sort by date</button> <!-- Botón para ordenar por fecha -->
+        </div>
+        <table id="rankingTable"> <!-- Tabla para mostrar el ranking de jugadores -->
+            <thead>
+                <tr>
+                    <th>Player</th> <!-- Encabezado de columna para el nombre del jugador -->
+                    <th>Points</th> <!-- Encabezado de columna para los puntos del jugador -->
+                    <th>Date</th> <!-- Encabezado de columna para la fecha de la partida -->
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se insertarán dinámicamente los datos del ranking -->
+            </tbody>
+        </table>
+        <a href="index.html" class="back-link">Play again</a> <!-- Enlace para regresar a la página principal del juego -->
+    </div>
+    <script src="ranking.js"></script> <!-- Enlace al archivo JavaScript que maneja la lógica de clasificación -->
+</body>
+</html>
