@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap'); /* Importa fuentes desde Google Fonts */
+
+* {
+    margin: 0; /* Elimina márgenes predeterminados */
+    padding: 0; /* Elimina rellenos predeterminados */
+    box-sizing: border-box; /* Asegura que el padding y el border no alteren las dimensiones del elemento */
+    font-family: "Poppins", sans-serif; /* Aplica la fuente Poppins a todo el documento */
+}
+
+body {
+    display: flex; /* Activa el diseño flexbox en el cuerpo */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    min-height: 100vh; /* Asegura que el cuerpo tenga al menos la altura de la ventana gráfica */
+    background: url('Images/azul.jpg') no-repeat; /* Establece una imagen de fondo */
+    background-size: cover; /* Escala la imagen de fondo para cubrir todo el cuerpo */
+    background-position: center; /* Centra la imagen de fondo */
+}
+
+.game {
+    background: transparent; /* Fondo transparente */
+    border: 2px solid rgba(255, 255, 255, .2); /* Borde blanco semitransparente */
+    backdrop-filter: blur(50px); /* Aplica un efecto de desenfoque al fondo detrás del contenedor */
+    box-shadow: 0 0 40px rgba(255, 255, 255, .2); /* Aplica una sombra alrededor del contenedor */
+    color: white; /* Establece el color del texto en blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 30px; /* Relleno interior */
+    width: 320px; /* Ancho fijo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+#tableWords {
+    max-width: 100%; /* Asegura que el ancho no exceda el contenedor */
+    word-wrap: break-word; /* Permite romper palabras largas para ajustar el ancho */
+    overflow-wrap: break-word; /* Alternativa a word-wrap, es más ampliamente soportada */
+    white-space: normal; /* Permite que el texto haga saltos de línea */
+}
+
+.dice {
+    display: inline-block; /* Muestra los elementos en línea como bloques */
+    font-weight: 400; /* Peso de fuente normal */
+    text-align: center; /* Centra el texto dentro del elemento */
+    border: 1px solid lightgrey; /* Borde gris claro */
+    font-size: 20px; /* Tamaño de fuente */
+    font-weight: bold; /* Fuente en negrita */
+    line-height: 1; /* Altura de línea */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); /* Sombra alrededor del elemento */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es clicable */
+    margin: 6px; /* Espacio alrededor del elemento */
+    background-color: whitesmoke; /* Fondo de color blanco humo */
+    width: 50px; /* Ancho fijo */
+    height: 50px; /* Altura fija */
+}
+
+.btn {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 45px; /* Altura fija */
+    background: #fff; /* Fondo blanco */
+    border: none; /* Sin borde */
+    outline: none; /* Sin contorno al hacer clic */
+    border-radius: 40px; /* Bordes muy redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1); /* Sombra alrededor del botón */
+    cursor: pointer; /* Cambia el cursor a una mano */
+    font-size: 16px; /* Tamaño de fuente */
+    color: #333; /* Color de texto gris oscuro */
+    font-weight: 600; /* Fuente seminegrita */
+    margin: 5px; /* Margen alrededor del botón */
+}
+
+.btnDivide {
+    display: flex; /* Aplica flexbox para alinear botones horizontalmente */
+}
+
+.btnRestart {  
+    margin: 0 10px; /* Espacio entre botones */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 45px; /* Altura fija */
+    background: #77ac5e; /* Fondo verde */
+    border: none; /* Sin borde */
+    outline: none; /* Sin contorno al hacer clic */
+    border-radius: 40px; /* Bordes muy redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1); /* Sombra alrededor del botón */
+    cursor: pointer; /* Cambia el cursor a una mano */
+    font-size: 16px; /* Tamaño de fuente */
+    color: #333; /* Color de texto gris oscuro */
+    font-weight: 600; /* Fuente seminegrita */
+    margin: 5px; /* Margen alrededor del botón */
+}
+
+.finish {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 45px; /* Altura fija */
+    background: white; /* Fondo blanco */
+    border: none; /* Sin borde */
+    outline: none; /* Sin contorno al hacer clic */
+    border-radius: 40px; /* Bordes muy redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1); /* Sombra alrededor del botón */
+    cursor: pointer; /* Cambia el cursor a una mano */
+    font-size: 16px; /* Tamaño de fuente */
+    color: #333; /* Color de texto gris oscuro */
+    font-weight: 600; /* Fuente seminegrita */
+    margin: 5px; /* Margen alrededor del botón */
+}
+
+#time {
+    text-align: center; /* Centra el temporizador horizontalmente */
+    font-size: 1.5rem; /* Tamaño de fuente grande */
+    font-weight: 600; /* Fuente seminegrita */
+    margin-bottom: 5px; /* Espacio debajo del temporizador */
+}
+
+.modal {
+    display: none; /* Oculta el modal por defecto */
+    position: fixed; /* Fija el modal sobre la página */
+    z-index: 1; /* Asegura que el modal esté por encima de otros elementos */
+    padding-top: 100px; /* Espacio superior */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    height: 100%; /* Ocupa toda la altura de la pantalla */
+    overflow: auto; /* Habilita el desplazamiento si el contenido es grande */
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo semitransparente */
+}
+
+.modalContent {
+    background-color: #fefefe; /* Fondo blanco */
+    margin: auto; /* Centra el modal horizontalmente */
+    padding: 20px; /* Relleno interior */
+    border: 1px solid #888; /* Borde gris */
+    width: 50%; /* Ocupa el 50% del ancho de la pantalla */
+    text-align: center; /* Centra el contenido del modal */
+}
+
+.close {
+    color: #aaa; /* Color gris claro para la X de cierre */
+    float: right; /* Flota a la derecha */
+    font-size: 28px; /* Tamaño de fuente grande */
+    font-weight: bold; /* Fuente en negrita */
+}
+
+.close:hover, .close:focus {
+    color: black; /* Cambia a negro al pasar el ratón o enfocar */
+    text-decoration: none; /* Elimina subrayado */
+    cursor: pointer; /* Cambia el cursor a una mano */
+}
+
+p {
+    text-align: center; /* Centra el texto dentro del párrafo */
+    margin-top: 10px; /* Margen superior para separarse de otros elementos */
+}
+
+span {
+    display: inline-block; /* Muestra los spans en línea pero como bloques */
+    padding-left: 5px; /* Relleno a la izquierda */
+    padding-right: 5px; /* Relleno a la derecha */
+}
+
+.tableTotal {
+    display: flex; /* Usa flexbox para alinear contenido en fila */
+    justify-content: space-between; /* Distribuye el contenido equitativamente */
+    margin: 10px 0px 20px 0px; /* Espacio arriba, abajo, izquierda y derecha */
+}
+
+button {
+    outline: none; /* Elimina contornos de los botones */
+}

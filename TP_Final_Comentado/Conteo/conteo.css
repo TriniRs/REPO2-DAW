@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+/* Importa la fuente "Poppins" de Google Fonts */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    /* Resetea márgenes y rellenos, establece el modelo de caja y la fuente por defecto */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('Images/azul.jpg') no-repeat center/cover;
+    /* Centra el contenido del cuerpo y agrega una imagen de fondo que cubre toda la pantalla */
+}
+
+.resultTable {
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(255, 255, 255, .2);
+    color: white;
+    border-radius: 10px;
+    padding: 30px 40px;
+    /* Estiliza la tabla de resultados con un borde, sombra y un efecto de desenfoque en el fondo */
+}
+
+h1 {
+    margin: 0 0 20px;
+    text-align: center;
+    /* Estiliza el encabezado principal con márgenes y lo centra */
+}
+
+#wordTable {
+    width: 100%;
+    margin-bottom: 20px;
+    /* Estiliza la tabla que contiene las palabras, ocupando todo el ancho disponible y con un margen inferior */
+}
+
+#wordTable td {
+    padding: 5px 0;
+    /* Añade relleno vertical a las celdas de la tabla */
+}
+
+#wordTable td:first-child {
+    text-align: left;
+    /* Alinea el contenido de la primera columna a la izquierda */
+}
+
+#wordTable td:last-child {
+    text-align: right;
+    /* Alinea el contenido de la última columna a la derecha */
+}
+
+#totalPoints {
+    border-top: 1px solid rgba(255, 255, 255, .2);
+    padding-top: 10px;
+    margin-bottom: 20px;
+    text-align: right;
+    font-weight: bold;
+    /* Estiliza el contenedor que muestra la puntuación total con un borde superior, relleno y texto alineado a la derecha */
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    /* Estiliza el botón de continuar con fondo blanco, borde redondeado, sombra y texto en negrita */
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Declara el tipo de documento HTML y define el idioma como español -->
+<head>
+    <meta charset="UTF-8"> <!-- Establece la codificación de caracteres a UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que la página sea responsive en dispositivos móviles -->
+    <title>Boggle Game</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="game.css"> <!-- Enlaza el archivo CSS principal para los estilos -->
+    <link rel="stylesheet" href="normalize.css"> <!-- Enlaza un archivo CSS para normalizar los estilos predeterminados de los navegadores -->
+</head>
+<body>
+    <div class="game"> <!-- Contenedor principal del juego -->
+        <div id="time">00:00</div> <!-- Muestra el temporizador del juego -->
+        <div class="board" id="board"> <!-- Tablero de juego -->
+            <div id="row0"></div> <!-- Fila 1 del tablero -->
+            <div id="row1"></div> <!-- Fila 2 del tablero -->
+            <div id="row2"></div> <!-- Fila 3 del tablero -->
+            <div id="row3"></div> <!-- Fila 4 del tablero -->
+        </div>
+        <div id="error"></div> <!-- Contenedor para mostrar mensajes de error -->
+        <p class="msg" id="currentWord"></p> <!-- Muestra la palabra que el jugador está formando actualmente -->
+        <p class="tableTitle" id="tableWords"></p> <!-- Muestra el título de la tabla de palabras -->
+        <div id="tableWords"></div> <!-- Contenedor para mostrar las palabras válidas ingresadas por el jugador -->
+        <div id="scoreTable"> <!-- Tabla que muestra la puntuación total -->
+            <div class="tableTotal"><span>Points: </span><span id="totalScore">0</span></div> <!-- Muestra la puntuación total del jugador -->
+        </div>
+        <button type='button' class='btn' id="submit">Confirm word</button> <!-- Botón para confirmar la palabra actual -->
+        <div class="btnDivide"> <!-- Contenedor para los botones de reinicio y finalización del juego -->
+            <button type='button' class='btnRestart' onclick="location.reload()">Restart</button> <!-- Botón para reiniciar el juego -->
+            <button type='button' class='finish' id="finish">Finish</button> <!-- Botón para finalizar el juego -->
+        </div>
+    </div>
+    <div id="myModal" class="modal"> <!-- Modal que aparece cuando se acaba el tiempo -->
+        <div class="modalContent">
+            <span class="close">&times;</span> <!-- Botón para cerrar el modal -->
+            <p>Time is over</p> <!-- Mensaje que se muestra en el modal -->
+            <button id="modalBtn">OK</button> <!-- Botón para confirmar y cerrar el modal -->
+        </div>
+    </div>
+    <div id="wordExistsModal" class="modal"> <!-- Modal que aparece cuando se ingresa una palabra repetida -->
+        <div class="modalContent">
+            <span class="close">&times;</span> <!-- Botón para cerrar el modal -->
+            <p>This word has already been submitted.</p> <!-- Mensaje que se muestra en el modal -->
+        </div>
+    </div>
+    <script type="text/javascript" src="game.js"></script> <!-- Enlaza el archivo JavaScript principal del juego -->
+</body>
+</html>

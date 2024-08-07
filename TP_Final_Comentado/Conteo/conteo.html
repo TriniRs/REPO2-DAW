@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Define el tipo de documento y el idioma del contenido -->
+<head>
+    <meta charset="UTF-8"> <!-- Especifica la codificación de caracteres para la página web -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para que sea responsiva en diferentes dispositivos -->
+    <title>Results</title> <!-- Título de la página web que aparecerá en la pestaña del navegador -->
+    <link rel="stylesheet" href="normalize.css"> <!-- Enlace a la hoja de estilos normalize.css para normalizar el CSS entre navegadores -->
+    <link rel="stylesheet" href="conteo.css"> <!-- Enlace a la hoja de estilos personalizada para esta página -->
+</head>
+<body>
+    <div class="resultTable"> <!-- Contenedor para la tabla de resultados -->
+        <h1>Results</h1> <!-- Encabezado principal de la página de resultados -->
+        <table id="wordTable"> <!-- Tabla para mostrar las palabras y sus puntos -->
+            <tbody id="wordList"></tbody> <!-- Cuerpo de la tabla donde se listarán dinámicamente las palabras y sus puntos -->
+        </table>
+        <div id="totalPoints">Total: 0</div> <!-- Muestra la puntuación total, inicialmente es 0 -->
+        <button class="btn" onclick="location.href='ranking.html'">Continue</button> <!-- Botón para continuar a la página de ranking -->
+    </div>
+    <script src="conteo.js"></script> <!-- Enlace al archivo JavaScript que maneja la lógica de esta página -->
+</body>
+</html>
